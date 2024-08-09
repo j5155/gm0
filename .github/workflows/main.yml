@@ -5,6 +5,16 @@ jobs:
     name: Push Sphinx Pages
     runs-on: ubuntu-latest
     steps:
+    - name: delete-branch
+  # You may pin to the exact commit or the version.
+  # uses: breningham/delete-branch@1946d8c3b9aec917f2dc4eb77f534e3f6e463fb9
+      uses: breningham/delete-branch@v1.0.0
+      with:
+    # The GitHub token to use
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    # The name of the branch to delete
+        branch_name: "gh-pages"
+          
     - uses: seanzhengw/sphinx-pages@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
