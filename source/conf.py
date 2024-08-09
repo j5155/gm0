@@ -132,6 +132,8 @@ default_image_centered = True
 # a list of builtin themes.
 #
 
+html_baseurl = "/gm0/"
+
 html_title = "Game Manual 0"
 html_theme = "furo"
 html_favicon = "_static/assets/gm0-logo.ico"
